@@ -1,7 +1,7 @@
 <h1>Mitigation of Stored XSS</h1>
 <p>In short, this bug is mix between XSS and SQL injection. That means we pass xss payload to SQL query through <b>First Name</b> and <b>Last Name</b> to store it in database.</p>
 <p>Mitigation is the same as XSS mitigation but we will sanitize user's input before use it in SQL query.</p>
-<p>There are two positions we can sanitize the input.</p>
+<p>There are two positions we can sanitize the input :</p>
 <ol>
 <li>While taking input in registration page.</li>
 <code>if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -13,7 +13,7 @@
     header("Location: http://127.0.0.1/Vulnerable_Codes/login.php");
     exit();
 }</code>
-<br>
+<br><br>
 <li>While passing parameters to the SQL query in database.php file.</li>
 <code>function add_new_user($conn, $fname, $lname, $username, $password)
 {
