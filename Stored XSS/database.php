@@ -23,10 +23,10 @@ function add_new_user($conn, $fname, $lname, $username, $password)
 //     $pq = $conn->prepare($query);
 //     $pq->execute(
 //         array(
-//             ':u' => htmlspecialchars($username),
-//             ':p' => htmlspecialchars($password),
 //             ':f' => htmlspecialchars($fname),
 //             ':l' => htmlspecialchars($lname)
+//             ':u' => htmlspecialchars($username),
+//             ':p' => $password
 //         )
 //     );
 // }
