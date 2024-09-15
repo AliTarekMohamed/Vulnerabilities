@@ -1,5 +1,5 @@
 <h1>Mitigation of Stored XSS</h1>
-<p>In short, this bug is mix between XSS and SQL injection. That means we can pass xss payload to SQL query through <strong>review textbox</strong> to store it in database.</p>
+<p>In short, We can consider that this bug is mix between XSS and SQL injection. That means we can pass xss payload to SQL query through <strong>review textbox</strong> to store it in database.</p>
 <p>Mitigation is the same as XSS mitigation but we will sanitize user's input before use it in SQL query.</p>
 <p>There are two positions we can sanitize the input :</p>
 <ol>
