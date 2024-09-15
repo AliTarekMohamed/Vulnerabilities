@@ -8,7 +8,6 @@
     $review = htmlspecialchars($_POST["review"]);
     $game_name = "Valorant";
     submit_review($conn, $game_name, $review);
-
     $result = get_reviews($conn, $game_name);
     foreach ($result as $res) {
         echo $res . "<br>";
