@@ -4,17 +4,16 @@
 <p>There are two positions we can sanitize the input :</p>
 <ol>
 <li>While taking input in review page.</li>
-<code>
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+<code>if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $review = htmlspecialchars($_POST["review"]);
     $game_name = "Valorant";
     submit_review($conn, $game_name, $review);
+
     $result = get_reviews($conn, $game_name);
     foreach ($result as $res) {
         echo $res . "<br>";
     }
-}
-</code>
+}</code>
 <br><br>
 <li>While passing parameters to the SQL query in database.php file.</li>
 <code>function submit_review($conn, $game_name, $review)
