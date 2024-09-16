@@ -12,7 +12,7 @@
     <h1>Search for game</h1>
 
     <form action="reflected_xss.php" method="GET">
-        <input id="search" name="search" placeholder="e.g. Valorant" require>
+        <input name="search" placeholder="e.g. Valorant" require>
         <button>Search</button>
     </form>
 
