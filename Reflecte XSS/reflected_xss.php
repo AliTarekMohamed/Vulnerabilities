@@ -13,7 +13,7 @@
 
     <form action="reflected_xss.php" method="GET">
         <input name="search" placeholder="e.g. Valorant" require>
-        <button>Search</button>
+        <button type="submit">Search</button>
     </form>
 
 </body>
