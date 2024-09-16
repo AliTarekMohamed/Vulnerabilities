@@ -7,7 +7,6 @@ So, We must solve this problem.</p>
   <li>
     </p>The first step is convert method from GET to POST. This step will make the parameter hidden and doesn't appear in url.</p>
   </li>
-      <br>
   <li>
     <p>The second step is sanitize the user's input from special characters.</p>
   </li>
