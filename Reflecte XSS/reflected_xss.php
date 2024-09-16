@@ -21,7 +21,7 @@
 require_once "connection.php";
 include "database.php";
 
-$search = $_GET["search"];
+$search = $_GET["search"];          // Mitigation => $search = htmlspecialchars($_GET["search"]);
 $result = search($conn, $search);
 
 echo "<br><h2>Search results for: $search</h2>";
