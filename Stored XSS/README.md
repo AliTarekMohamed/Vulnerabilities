@@ -4,7 +4,7 @@
 <p>There are two positions we can sanitize the input :</p>
 <ol>
 <li>While taking input in review page.</li>
-<code>if ($_SERVER["REQUEST_METHOD"] === "POST") {
+<pre>if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $review = htmlspecialchars($_POST["review"]);
     $game_name = "Valorant";
     submit_review($conn, $game_name, $review);
@@ -12,10 +12,10 @@
     foreach ($result as $res) {
         echo $res . "<br>";
     }
-}</code>
+}</pre>
 <br><br>
 <li>While passing parameters to the SQL query in database.php file.</li>
-<code>function submit_review($conn, $game_name, $review)
+<pre>function submit_review($conn, $game_name, $review)
 {
     $query = "INSERT INTO reviews Values (:g, :r)";
     $pq = $conn->prepare($query);
@@ -25,5 +25,5 @@
             ":g" => $game_name
         )
     );
-}</code>
+}</pre>
 </ol>
