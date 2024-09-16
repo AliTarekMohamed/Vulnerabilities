@@ -6,8 +6,7 @@ So, We must solve this problem.</p>
 <ol>
   <li>
     </p>The first step is convert method from GET to POST. This step will make the parameter hidden and doesn't appear in url.</p>
-    <pre>```html
-      <form action="reflected_xss.php" method="POST"></pre><br><br>
+    <pre>'<form action="reflected_xss.php" method="POST">'</pre><br><br>
     <pre>if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $search = htmlspecialchars($_POST["search"]);
     $result = search($conn, $search);
