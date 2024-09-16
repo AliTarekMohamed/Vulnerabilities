@@ -13,7 +13,7 @@
 
     <form method="post">
         <input name="game_name" placeholder="e.g. Valorant" require><br>
-        <button>Search</button>
+        <button type="submit">Search</button>
     </form>
 
 </body>
