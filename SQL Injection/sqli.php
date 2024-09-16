@@ -14,7 +14,7 @@
     <form method="post">
         <Label>Username: </Label><input name="username" require><br><br>
         <Label>Password: </Label><input name="password" type="password" require><br><br>
-        <button>Login</button>
+        <button type="submit">Login</button>
     </form>
 
 </body>
