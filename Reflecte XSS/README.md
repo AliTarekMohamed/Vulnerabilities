@@ -6,8 +6,8 @@ So, We must solve this problem.</p>
 <ol>
   <li>
     </p>The first step is convert method from GET to POST. This step will make the parameter hidden and doesn't appear in url.</p>
-    <code><form action="reflected_xss.php" method="POST"></code><br><br>
-    <code>if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    <pre><form action="reflected_xss.php" method="POST"></pre><br><br>
+    <pre>if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $search = htmlspecialchars($_POST["search"]);
     $result = search($conn, $search);
     echo "<br>\<h2\>Search results for: $search</h2>";
@@ -18,14 +18,13 @@ So, We must solve this problem.</p>
     } else {
         echo "<br>Game not found";
     }
-}</code>
+}</pre>
   </li>
       <br>
   <li>
     <p>The second step is sanitize the user's input from special characters.</p>
-    <code>$search = htmlspecialchars($_POST["search"]);</code>
+    <pre>$search = htmlspecialchars($_POST["search"]);</pre>
   </li>
 </ol>
 <br>
 Now, Our website is safe.
-<pre>hello</pre>
