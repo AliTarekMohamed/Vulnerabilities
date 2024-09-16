@@ -5,12 +5,12 @@ So, We must solve this problem.</p>
 <ul><h3>The mitigation will be done in two steps:</h3></ul>
 <ol>
   <li>
-    The first step is convert method from GET to POST. This step will make the parameter hidden and doesn't appear in url.
+    <p>The first step is convert method from GET to POST. This step will make the parameter hidden and doesn't appear in url.</p>
     <code><form action="reflected_xss.php" method="POST"></code>
     <code>if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $search = htmlspecialchars($_POST["search"]);
     $result = search($conn, $search);
-    echo "<br>\<h2\>Search results for: $search\</h2\>";
+    echo "<br>\<h2>Search results for: $search\</h2>";
     if ($result) {
         echo "<br>Game: $result[0]<br>";
         echo "Type: $result[1]<br>";
@@ -21,8 +21,9 @@ So, We must solve this problem.</p>
 }</code>
   </li>
   <li>
-    The second step is sanitize the user's input from special characters.
+    <p>The second step is sanitize the user's input from special characters.</p>
     <code>$search = htmlspecialchars($_POST["search"]);</code>
   </li>
 </ol>
+<br>
 Now, Our website is safe.
