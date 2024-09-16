@@ -18,4 +18,4 @@
 <h3>Tips & Tricks</h3>
 <p>According to is_user_exist function the result that will be returned in count variable will be 1 value because there is only one user has this credentials.</p>
 <p>So, Instead of this way of checking the result : <pre>if (is_user_exist($conn, $username, $password) > 0)</pre></p>
-<p>We can check like that : <pre>if (is_user_exist($conn, $username, $password) === 1)</pre>.</p>
+<p>We can check like that : <pre>if (is_user_exist($conn, $username, $password) === 1)</pre></p>
