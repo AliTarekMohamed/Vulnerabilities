@@ -12,7 +12,7 @@
     <form method="post">
         <img src="Valorant.jpg"><br>
         <input name="review" placeholder="Submit your opinion about this product" style="width: 700px; height: 250px; text-align: center;" require><br><br>
-        <button>Submit</button>
+        <button  type="submit">Submit</button>
     </form>
 
 </body>
