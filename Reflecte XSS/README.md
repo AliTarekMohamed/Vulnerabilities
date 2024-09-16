@@ -5,7 +5,7 @@ So, We must solve this problem.</p>
 <h2>The mitigation will be done in two steps:</h2>
 <ol>
   <li>
-    </p>The first step is convert method from GET to POST.
+    </p>The first step is convert method from <strong>GET</strong> to <strong>POST.</strong>
   This step will make the parameter hidden and doesn't appear in url.</p>
   </li>
   <li>
