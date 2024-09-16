@@ -10,7 +10,7 @@ So, We must solve this problem.</p>
     <code>if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $search = htmlspecialchars($_POST["search"]);
     $result = search($conn, $search);
-    echo "<br><h2>Search results for: $search</h2>";
+    echo "<br>\<h2\>Search results for: $search\</h2\>";
     if ($result) {
         echo "<br>Game: $result[0]<br>";
         echo "Type: $result[1]<br>";
