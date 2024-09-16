@@ -1,11 +1,11 @@
 <h1>Mitigation of SQL Injection</h1>
 <p>In fact, We shouldn't pass parameters direct to the query. For example, If we try this payload <code>hello' OR '1'='1</code> instead of normal username and password; we will login succfully. That happenes beacause we pass the parameter direct to SQL query.</p>
-<p>There are some techniques to avoid SQL injection. One of this techniques called <b>Placeholder</b>.</p>
-<p>Placeholder used in the prepared statement. It allows us to safely pass parameters to an SQL query to avoid SQL injection.</p>
+<p>There are some techniques to avoid SQL injection. One of this techniques called <b>Parameterized query</b>.</p>
+<p>Parameterized query used in the SQL query. It allows us to pass parameters to SQL query safely to avoid SQL injection.</p>
 <p>So, the main difference is in database. SQL queries that check credintial will be : <br><pre>function is_user_exist($conn, $username, $password)
 {
-    $sql = "SELECT COUNT(*) FROM users WHERE username = :u AND password = :p";
-    $pq = $conn->prepare($sql);
+    $query = "SELECT COUNT(*) FROM users WHERE username = :u AND password = :p";
+    $pq = $conn->prepare($query);
     $pq->execute(
         array(
             ':u' => $username,
